@@ -66,6 +66,11 @@ class WebDAVAdapter extends AbstractAdapter
         $this->setUseStreamedCopy($useStreamedCopy);
     }
 
+    public function getUrl($path)
+    {
+        return $this->encodePath($path);
+    }
+	
     /**
      * url encode a path
      *
